@@ -14,26 +14,40 @@ new Vue(
         // -----------------------------
         data: {
             toDoList: [
-                'Fare l\'esercizio',
+                {
+                    text: 'Fare l\'esercizio',
+                    tickClass: 'far fa-circle',
+                },
+                {
+                    text: 'Pushare spesso',
+                    tickClass: 'far fa-circle',
+                },
+                {
+                    text: 'Aprire Hotwell',
+                    tickClass: 'far fa-circle',
+                },
+
             ],
-            newTask:'',
-            //tickClass: 'far fa-circle',
+            newTask: '',
         },
-        
+
         // -----------------------------
         methods: {
-            addTask: function(){
-                if(this.newTask !== ''){
-                    this.toDoList.push(this.newTask)
+            addTask: function () {
+                if (this.newTask !== '') {
+                    this.toDoList.push({
+                        text: this.newTask,
+                        tickClass: 'far fa-circle'
+                    })
                     this.newTask = '';
                 }
             },
-            removeTask: function(index){
+            removeTask: function (index) {
                 this.toDoList.splice(index, 1)
             },
-            tick: function(index){
+            tick: function (index) {
                 if (this.toDoList[index].tickClass === 'far fa-circle') {
-                    this.toDoList[index].tickClass = 'far fa-check-circle';
+                    this.toDoList[index].tickClass = 'far fa-check-circle green';
                 } else {
                     this.toDoList[index].tickClass = 'far fa-circle';
                 }
