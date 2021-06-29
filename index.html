@@ -35,12 +35,12 @@
 
             <!-- Input -->
             <div class="row justify-content-center mt-4 input-section">
-                <div class="col-6">
+                <div class="col-8 col-lg-6">
                     <div class="row">
-                        <div class="col-9">
-                            <input class="w-100" v-model="newTask" @keyup.enter="addTask()" placeholder="Inserisci una cosa da fare">
+                        <div class="col-8 col-lg-9">
+                            <input class="w-100" v-model="newTask" @keyup.enter="addTask()" placeholder="Nuovo ToDo">
                         </div>
-                        <div class="col-3">
+                        <div class="col-4 col-lg-3">
                             <button type="button" class="w-100 btn btn-secondary" @click="addTask()"> Aggiungi </button>
                         </div>
                     </div>
