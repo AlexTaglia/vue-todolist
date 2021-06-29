@@ -1,5 +1,6 @@
 li{
     list-style: none;
+    padding: 12px;
 }
 
 .input-section input{
@@ -12,6 +13,7 @@ ul{
 
 .list-inner{
     border-radius: 6px;
+    padding: 12px;
 }
 
 .list-section li{
@@ -34,4 +36,8 @@ i{
 
 .left i {
     padding-right: 24px;
+}
+
+li:hover{
+    background-color: white;
 }
