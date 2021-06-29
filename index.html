@@ -26,29 +26,41 @@
 
         <div class="container">
 
-            <div class="row">
-                <div class="col-12">
-                    <!-- <img src="./img/logo.png" alt="Logo"> -->
+            <!-- Logo -->
+            <div class="row justify-content-center mt-4">
+                <div class="col-3">
+                    <img class="img-fluid" src="./img/logo.png" alt="Logo">
                 </div>
             </div>
 
-
-            <div class="row">
-                <div class="col-12">
-                    <input v-model="newTask" @keyup.enter="addTask()" placeholder="Inserisci una cosa da fare">
-                    <button @click="addTask()"> Aggiungi </button>
+            <!-- Input -->
+            <div class="row justify-content-center mt-4 input-section">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-9">
+                            <input class="w-100" v-model="newTask" @keyup.enter="addTask()" placeholder="Inserisci una cosa da fare">
+                        </div>
+                        <div class="col-3">
+                            <button type="button" class="w-100 btn btn-secondary" @click="addTask()"> Aggiungi </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="row">
-                <ul>
-                    <li v-for="(task, index) in toDoList">
-                        <span>{{task}}</span>
-                         <i @click="removeTask(index)" class="fas fa-trash-alt"></i>
+
+            <!-- List -->
+            <div class="row justify-content-center mt-4 list-section" >
+                <div class="col-8 bg-light list-inner">
+                    <ul>
+                        <li class="d-flex justify-content-between align-items-center" v-for="(task, index) in toDoList">
+                            <div class="left">
+                                <!-- <i class="circle far fa-circle"></i> -->
+                                <span>{{task}}</span>
+                            </div>
+                            <i @click="removeTask(index)" class="fas fa-trash-alt"></i>
                         </li>
-                </ul>
+                    </ul>
+                </div>
             </div>
-
 
         </div>
     </div>

@@ -1,6 +1,33 @@
 li{
     list-style: none;
 }
+
+.input-section input{
+ line-height: 32px;
+}
+
+ul{
+    padding-left: 0;
+}
+
+.list-inner{
+    border-radius: 6px;
+}
+
+.list-section li{
+    height: 44px;
+    border-bottom: 1px solid rgb(187, 187, 187);
+}
+
 i{
-    padding-right: 10px;
+    cursor: pointer;
+}
+
+.circle{
+    font-size: 14px;
+    font-weight: ;
+}
+
+.green{
+    color: green;
 }
