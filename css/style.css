@@ -31,3 +31,7 @@ i{
 .green{
     color: green;
 }
+
+.left i {
+    padding-right: 24px;
+}

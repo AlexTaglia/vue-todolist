@@ -53,7 +53,7 @@
                     <ul>
                         <li class="d-flex justify-content-between align-items-center" v-for="(task, index) in toDoList">
                             <div class="left">
-                                <!-- <i class="circle far fa-circle"></i> -->
+                                <i @click="tick(index)" class="circle" :class="tickClass"></i>
                                 <span>{{task}}</span>
                             </div>
                             <i @click="removeTask(index)" class="fas fa-trash-alt"></i>

@@ -17,6 +17,7 @@ new Vue(
                 'Fare l\'esercizio',
             ],
             newTask:'',
+            tickClass: 'far fa-circle',
         },
 
         // -----------------------------
@@ -29,10 +30,16 @@ new Vue(
             },
             removeTask: function(index){
                 this.toDoList.splice(index, 1)
-            }
+            },
+            tick: function(index){
+                if (this.tickClass === 'far fa-circle') {
+                //if (this.toDoList[index].tickClass === 'far fa-circle') {
 
+                    this.tickClass = 'far fa-check-circle';
+                } else {
+                    this.tickClass = 'far fa-circle';
+                }
+            },
         }
-        
     }
-
 )
